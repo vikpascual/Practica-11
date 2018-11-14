@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
     </head>
     <body>
+        <form>
        <table>
            <tr>
                 <td>Tratamiento</td>
@@ -26,7 +27,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
+                <td><select name="tipo_documento"><option value="1">D.N.I</option><option value="2">Tarj. Resid./NIE</option></select></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -78,9 +79,45 @@
                         <td></td>
                         <td></td>
                     </tr>
+                    <tr>
+                        <td>Urb./Pol./Otros</td>
+                        <td>Localidad*</td>
+                        <td>Provincia*</td>
+                        <td>Código Postal *</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono móvil:*</td>
+                        <td>Teléfono móvil</td>
+                        <td colspan="2">Dirección de e-mail:*</td>
+                    </tr>
                 </table>
             </tr>
-       </table>
-       
+                <tr id="borde1">
+                    <!-- Pongo "BR" porque no coje el salto de linea -->
+                    <td>Para ofrecerle un mejor servicio nos sería útil conocer si posee en otra entidad:<br></td>  
+                </tr>
+               
+                <tr>
+                    <td><input type="checkbox" value="Plan_de_pensiones"> Plan de pensiones</td>
+                    <td><input type="checkbox" value="Fondos"> Fondos</td>
+                    <td><input type="checkbox" value="Acciones"> Acciones</td>
+                    <td><input type="checkbox" value="Hipoteca"> Hipoteca</td>
+                    <td><input type="checkbox" value="Préstamo"> Préstamo</td>
+                    <td><input type="checkbox" value="Seguro_de_vida"> Seguro de vida</td>
+                </tr>
+                <tr id="borde2">
+                </tr>
+                <tr>
+                    <td colspan="3"><br><br>Puede consultar en nuestra Web o solicitarnos toda la Información Precontractual de nuestros productos. Al pulsar "Continuar" está aceptando la Cláusula de Protección<br> de datos.(*) Los campos marcados con asterisco son obligatorios</td>
+                    <td><br><img src="img/continuar.jpg"></td>
+                </tr>
+        </table>
+        </form>
     </body>
 </html>
