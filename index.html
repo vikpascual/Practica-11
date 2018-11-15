@@ -2,23 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Page Title</title>
+        <title>ING</title>
         <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
     </head>
     <body>
-        <form>
+        <div>
+        <form method="POST">
        <table>
            <tr>
                 <td>Tratamiento</td>
-                <td>Nombre</td>
-                <td>Apellido1</td>
+                <td>Nombre*</td>
+                <td>Apellido 1*</td>
                 <td>Apellido 2</td>
            </tr>
            <tr>
-               <td><input type="radio" value="Sr." name="Sr."><label for="Sr.">Sr.</label><input type="radio" value="Sr." name="Sr."><label for="Sr.">Sr.</label></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+               <td><input type="radio" value="Sr." name="Sr."><label for="Sr.">Sr.</label><input type="radio" value="Sra." name="Sr."><label for="Sr.">Sra.</label></td>
+                <td><input type="text" name="Nombre" required></td>
+                <td><input type="text" name="Apellido1" required></td>
+                <td><input type="text" name="Apellido2"></td>
             </tr>
             <tr>
                 <td>Tipo Doc:*</td>
@@ -27,9 +28,9 @@
                 <td></td>
             </tr>
             <tr>
-                <td><select name="tipo_documento"><option value="1">D.N.I</option><option value="2">Tarj. Resid./NIE</option></select></td>
-                <td></td>
-                <td></td>
+                <td><select name="tipo_documento" required><option value="1">D.N.I</option><option value="2">Tarj. Resid./NIE</option></select></td>
+                <td><input type="text" name="n_documento" required></td>
+                <td><input type="date" required></td>
                 <td></td>
             </tr>
             <tr>
@@ -39,31 +40,105 @@
                 <td>País de residencia fiscal:*</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <!-- NO PONGO TODOS LOS PAISES Y NACIONALIDADES POR FALTA DE TIEMPO -->
+                <td>
+                    <select name="pais_nacimiento" required>
+                        <option value="ESP">España</option>
+                        <option value="FR">Francia</option>
+                        <option value="GER>">Alemania</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="nacionalidad" required>
+                        <option value="ESP">España</option>
+                        <option value="FR">Francia</option>
+                        <option value="GER>">Alemania</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="nacionalidad2">
+                        <option value="no2">Ninguna</option>
+                        <option value="ESP">España</option>
+                        <option value="FR">Francia</option>
+                        <option value="GER>">Alemania</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="residencia_fiscal" required>
+                        <option value="ESP">España</option>
+                        <option value="FR">Francia</option>
+                        <option value="GER>">Alemania</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <td><input type="checkbox"> Tengo más de una residencia fiscal</td>
+                <td><input type="checkbox" value="multiples_residencias"> Tengo más de una residencia fiscal</td>
             </tr>
             <tr>
                 <td>Trabajo:*</td>
-                <td>Tipo de actividad*</td>
+                <td>Tipo de actividad</td>
                 <td>Sector Profesional</td>
-                <td>Empresa:*</td>
+                <td>Empresa:</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>
+                    <select name="Trabajo" required>
+                        <option value="no_trabaja">No trabaja</option>
+                        <option value="trabaja_cuenta_ajena">Por cuenta ajena</option>
+                        <option value="trabaja_cuenta_propia>">Por cuenta propia</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="Tipo_actividad">
+                        <option value="Tareas_hogar">Tareas del hogar</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Desempleado">Desempleado</option>
+                        <option value="Jubilado">Jubilado</option>
+                        <option value="Pensionista">Pensionista</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="Sector_profesional">
+                        <option value="No_trabaja">No disponible</option>
+                        <option value="Banca">No disponible</option>
+                        <option value="Construccion">No disponible</option>
+                        <option value="Energia">No disponible</option>
+                        <option value="No_disponible2">No disponible</option>
+                        <option value="No_disponible2">No disponible</option>
+                        <option value="No_disponible2">No disponible</option>
+                    
+                    </select>
+                </td>
+                <td><input type="text" name="Empresa"></td>
             </tr>
             <tr>
                 <td>Propósito de la cuenta:*</td>
                 <td>Origen de sus ahorros:*</td>
                 <td></td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="Proposito" style="width: 200px;" required>
+                        <option value="Ahorro">Ahorro</option>
+                        <option value="Domiciliar">Domiciliar mi nómina, recibos.</option>
+                        <option value="Gestion_empresa">Gestión de mi empresa</option>
+                        <option value="fondos_planes">Fondos, planes, bolsa</option>
+                        <option value="Obtener_financiacion">Obtener financiacion</option>
+                        <option value="Realizar_ingresos">Realizar ingresos</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="Origen_ahorros" style="width: 200px;" required>
+                        <option value="Nomina">Mi nómina, pensión, o prestación por desempleo</option>
+                        <option value="Su_empresa">Mi empresa o negocio</option>
+                        <option value="Renta_inmobiliaria">Rentas inmobiliarias</option>
+                        <option value="Renta_capital">Rentas de capital</option>
+                        <option value="Prestaciones_sociales">Prestaciones sociales</option>
+                        <option value="Otros">Otros: Herencias. loterias</option>
+                        <option value="Prestamo">Préstamo</option>
+                    </select>   
+                </td>
             </tr>
             <tr>
                 <table id="tabla2">
@@ -74,10 +149,17 @@
                         <td>Piso</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <select name="tipo_via" required>
+                                <option value="calle">CALLE</option>
+                                <option value="avenida">AVENIDA</option>
+                                <option value="alameda>">ALAMEDA</option>
+                                <option value="puente">PUENTE</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="Direccion" required></td>
+                        <td><input type="text" name="Numero" required></td>
+                        <td><input type="text" name="Piso" required></td>
                     </tr>
                     <tr>
                         <td>Urb./Pol./Otros</td>
@@ -86,20 +168,33 @@
                         <td>Código Postal *</td>
                      </tr>
                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><input type="text" name="Urbanizacion" required></td>
+                        <td><input type="text" name="Localidad" required></td>
+                        <td>
+                            <!-- NO PONGO TODAS LAS PROVINCIAS POR FALTA DE TIEMPO -->
+                            <select name="Provincia" required>
+                                <option value="VLC">Comunidad Valenciana</option>
+                                <option value="CAT">Cataluña</option>
+                                <option value="MAD>">Madrid</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="Cod_Postal" required></td>
                     </tr>
                     <tr>
                         <td>Teléfono móvil:*</td>
-                        <td>Teléfono móvil</td>
+                        <td>Teléfono particular</td>
                         <td colspan="2">Dirección de e-mail:*</td>
                     </tr>
+                    <tr>
+                        <td><input type="text" name="tlf_movil" required></td>
+                        <td><input type="text" name="tlf_particular" required></td>
+                        <td colspan="2"><input type="email" name="email" style="width: 465px;" required></td>
+                    </tr>
                 </table>
+                <!-- AQUI SE ME CIERRAN LAS 2 TABLAS CUANDO DEBERÍA CERRARSE SOLO 1 -->
             </tr>
                 <tr id="borde1">
-                    <!-- Pongo "BR" porque no coje el salto de linea -->
+                    <!-- Pongo "BR" porque a partir de aqui no coje el salto de linea de "TR" -->
                     <td>Para ofrecerle un mejor servicio nos sería útil conocer si posee en otra entidad:<br></td>  
                 </tr>
                
@@ -114,10 +209,12 @@
                 <tr id="borde2">
                 </tr>
                 <tr>
-                    <td colspan="3"><br><br>Puede consultar en nuestra Web o solicitarnos toda la Información Precontractual de nuestros productos. Al pulsar "Continuar" está aceptando la Cláusula de Protección<br> de datos.(*) Los campos marcados con asterisco son obligatorios</td>
-                    <td><br><img src="img/continuar.jpg"></td>
+                    <td colspan="3"><br><br><pre>Puede consultar en nuestra Web o solicitarnos toda la Información Precontractual de nuestros productos. Al pulsar "Continuar" está<br>aceptando la Cláusula de Protección de datos.(*) Los campos marcados con asterisco son obligatorios.</pre></td>
+                    <td><br><br><input type="image" src="img/continuar.jpg" alt="Enviar"></td>
+                    <!-- EN VEZ DE TYPE="IMAGE" TAMBIÉN SE PODRÍA PONER BUTTON/SUMBIT -->
                 </tr>
         </table>
         </form>
+        </div>
     </body>
 </html>
