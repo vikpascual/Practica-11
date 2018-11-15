@@ -3,11 +3,11 @@ table {
     padding: 10px;
 }
 table#tabla2 {
-    background-color: grey;
+    background-color: #b2babb;
 }
 hr {
-    width: 50%;
     text-align: left;
+    color: #b2babb;
 }
 tr#borde1 {
     border-top: 1px solid;
@@ -20,6 +20,17 @@ img {
 }
 div {
     border: 2px solid;
-    width: 50%;
+    width: 25%;
     padding: 10px;
+    float:left;
+}
+div#medio {
+    float: left;
+    margin-left: 200px;
+}
+h1#Titulo {
+    color: rgb(255, 98, 0);
+    font-size: 48px;
+    line-height: 43px;
+    text-align: center;
 }
