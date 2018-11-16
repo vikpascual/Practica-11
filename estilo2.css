@@ -39,3 +39,6 @@ span.naranja {
 input#imagen {
     width: 200px;
 }
+a#enlace1 {
+    color: rgb(255, 98, 0);
+}
