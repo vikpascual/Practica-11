@@ -4,7 +4,6 @@ input {
 }
 div#medio {
     float: left;
-    margin-left: 10px;
     width: 600px;
 }
 div#Principal {
@@ -22,9 +21,8 @@ h1#Titulo {
 div {
     margin: 20px;
     float: left;
-    width: 400px;
+    width: 250px;
     text-align: left;
-    border: 2px solid;
 }
 table {
     text-align: left;
@@ -37,4 +35,7 @@ section#tabla {
 }
 span.naranja {
     color: orangered;
+}
+input#imagen {
+    width: 200px;
 }
