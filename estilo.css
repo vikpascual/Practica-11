@@ -41,7 +41,7 @@ h1#Titulo {
     line-height: 43px;
     text-align: center;
 }
-input {
+input .ING {
     width: 50%;
     height: 40px;
 }
