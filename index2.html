@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="estilo.css" />
     </head>
     <body>
+        <div id="Principal">
         <header>
             <div>
                 <img src="img/logo.png" width="400">
@@ -14,5 +15,29 @@
                 <h1 id="Titulo">Abrir cuenta NOMINA</h1>
             </div>
         </header>
+        <main>
+            <form>
+            <section>
+                    <table style="text-align: left;">
+                        <tr>
+                            <td>Correo Electrónico</td>
+                            <td>DNI o Tarjeta de residencia</td>
+                            <td>Fecha de nacimiento</td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" required></td>
+                            <td><input type="text" name="DNI" required></td>
+                            <td><input type="date" name="fecha" required></td>
+                        </tr>
+                    </table>
+            </section>
+            <section>
+                <p style="text-align: left;">Consulte la <a href="http://www.ingdirect.es/sobre-ing/pdf/InfPrecontractual.pdf">Información Precontractual</a> de la Cuenta NÓMINA que también encontrará en el apartado "Información legal"</p>
+                <iframe src="iframe.html" width="100%"></iframe><br>
+                <p style="text-align: right;"><br>Al pulsar "Continuar" declara haber leido y acepta la información sobre Protección de Datos</p><br><hr>
+            </section>
+        </main>
+        </div>
+        </form>
     </body>
 </html>
